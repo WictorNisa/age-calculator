@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Age calculator app</title>
+  </head>
+  <body class="body">
+    <section class="main-wrap">
+      <div class="form-div">
+        <form id="ageForm">
+          <div class="input-div">
+            <!-- Add the 'input-wrapper' div for each input field -->
+            <div class="age-input-div input-wrapper">
+              <div class="lab">
+                <label for="day">DAY</label>
+              </div>
+              <input type="number" id="day" placeholder="DD" maxlength="2" />
+              <span class="error" id="dayError"></span>
+            </div>
+
+            <div class="age-input-div input-wrapper">
+              <div class="lab">
+                <label for="month">MONTH</label>
+              </div>
+              <input type="number" id="month" placeholder="MM" maxlength="2" />
+              <span class="error" id="monthError"></span>
+            </div>
+
+            <div class="age-input-div input-wrapper">
+              <div class="lab">
+                <label for="year">YEAR</label>
+              </div>
+              <input type="number" id="year" placeholder="YY" maxlength="4" />
+              <span class="error" id="yearError"></span>
+            </div>
+          </div>
+          <div class="symbol-circle-wrap">
+            <hr />
+            <button class="symbol-circle-div" type="submit" id="submit-button">
+              <img
+                src="assets/images/icon-arrow.svg"
+                alt="image of a down-pointed arrow"
+                class="arrow-symbol"
+              />
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <div id="age-div">
+        <p class="age-p" id="year-p"><span>--</span> Years</p>
+        <p class="age-p" id="month-p"><span>--</span> Months</p>
+        <p class="age-p" id="day-p"><span>--</span> Days</p>
+      </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="app.js" type="module"></script>
+  </body>
+</html>
